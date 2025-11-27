@@ -1,12 +1,15 @@
 package ch.comem.archidep.floodit.utils;
 
+import ch.comem.archidep.floodit.FloodItApplication;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.transaction.support.TransactionTemplate;
 
 @SpringBootTest(webEnvironment = WebEnvironment.NONE)
+@ContextConfiguration(classes = FloodItApplication.class)
 public abstract class AbstractServiceTests {
 
   @Autowired
